@@ -29,7 +29,7 @@ Where H1 is an input parameter.
 
 The final formula, implemented in the code, is:  
 ![](./img/img2.png)  
-Where is wasy to see how the parameter __k__ has been replaced by the summation
+Where is easy to see how the parameter __k__ has been replaced by the summation
 of window functions for each pattern. In the end the window function was used
 to count how many patterns are within the region __R__.
 
