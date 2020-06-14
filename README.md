@@ -33,12 +33,16 @@ Where is easy to see how the parameter __k__ has been replaced by the summation
 of window functions for each pattern. In the end the window function was used
 to count how many patterns are within the region __R__.
 
-## Compile and run the test (Estimation of gaussian pdf)
-
+## Compile
+To compile the program execute the following command:
 ```
-g++ test_ParzenWindow.cc pdfEstimatorPW.cc utils.cc -o test_ParzenWindow
-
+make
 ```
+It will create the executable files:
+* test_ParzenWindow
+* test_IRIS_Classifier
+
+## Run the test (Estimation of gaussian pdf)
 For this test I used a gaussian distribution in 1D and 2D. The following lines explain how to run the tests.
 ```
 # Test 1D
@@ -63,14 +67,17 @@ and the estimated pdf was drawn in purple.
 
 ![H1 = 4.5](./img/img_H_4.5.png) __H1 = 4.5__
 
-## IRIS Classifier test
+## Run IRIS Classifier test
 I used the parzen window estimation to exploit the Bayes theorem in order to get a classification of the well known iris dataset.
 There is a validation test in order to find out the best H1 to give in input to the parzen window estimator.
-For the complilation execute this command:
-```
-g++ IRIS_Classifier.cc pdfEstimatorPW.cc utils.cc -o IRIS_Classifier
-```
+
 For run the test, execute this command:
 ```
 ./IRIS_Classifier
+```
+
+## Remove all the created files
+To remove all the object files and executable files run the following command:
+```
+make clean
 ```
